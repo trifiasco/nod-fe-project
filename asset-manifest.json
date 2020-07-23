@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/node-fe-project/static/css/main.5f361e03.chunk.css",
+    "main.js": "/node-fe-project/static/js/main.57b373f0.chunk.js",
+    "main.js.map": "/node-fe-project/static/js/main.57b373f0.chunk.js.map",
+    "runtime-main.js": "/node-fe-project/static/js/runtime-main.7f156e5d.js",
+    "runtime-main.js.map": "/node-fe-project/static/js/runtime-main.7f156e5d.js.map",
+    "static/js/2.f8f13b51.chunk.js": "/node-fe-project/static/js/2.f8f13b51.chunk.js",
+    "static/js/2.f8f13b51.chunk.js.map": "/node-fe-project/static/js/2.f8f13b51.chunk.js.map",
+    "index.html": "/node-fe-project/index.html",
+    "precache-manifest.25b6bfcce0c95dba9fb48b36fdc3e730.js": "/node-fe-project/precache-manifest.25b6bfcce0c95dba9fb48b36fdc3e730.js",
+    "service-worker.js": "/node-fe-project/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/node-fe-project/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.f8f13b51.chunk.js.LICENSE.txt": "/node-fe-project/static/js/2.f8f13b51.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/node-fe-project/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7f156e5d.js",
+    "static/js/2.f8f13b51.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.57b373f0.chunk.js"
+  ]
+}
