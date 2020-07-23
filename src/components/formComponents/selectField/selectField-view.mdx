@@ -1,0 +1,28 @@
+---
+name: Select Field
+menu: Components
+---
+
+import SelectField from './selectField-view.js'
+import { Playground, Props } from 'docz'
+
+# Select Field
+
+<Props of={SelectField} />
+
+## Basic Usage
+
+<Playground>
+    {() => {
+        const options = ['1', '2', '3'];
+        const selectedValue = ['2'];
+        return (
+            <>
+                <SelectField id="field1" label="single dropdown" variant="single" selectedValue={selectedValue} currentOptions={options} />
+                <SelectField id="field2" label="multiple dropdown" variant="multiple" selectedValue={selectedValue} currentOptions={options} />
+
+            </>
+        )
+    }}
+    
+</Playground>
