@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/node-fe-project/static/css/main.5f361e03.chunk.css",
-    "main.js": "/node-fe-project/static/js/main.57b373f0.chunk.js",
-    "main.js.map": "/node-fe-project/static/js/main.57b373f0.chunk.js.map",
-    "runtime-main.js": "/node-fe-project/static/js/runtime-main.7f156e5d.js",
-    "runtime-main.js.map": "/node-fe-project/static/js/runtime-main.7f156e5d.js.map",
-    "static/js/2.f8f13b51.chunk.js": "/node-fe-project/static/js/2.f8f13b51.chunk.js",
-    "static/js/2.f8f13b51.chunk.js.map": "/node-fe-project/static/js/2.f8f13b51.chunk.js.map",
-    "index.html": "/node-fe-project/index.html",
-    "precache-manifest.25b6bfcce0c95dba9fb48b36fdc3e730.js": "/node-fe-project/precache-manifest.25b6bfcce0c95dba9fb48b36fdc3e730.js",
-    "service-worker.js": "/node-fe-project/service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "/node-fe-project/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.f8f13b51.chunk.js.LICENSE.txt": "/node-fe-project/static/js/2.f8f13b51.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/node-fe-project/static/media/logo.5d5d9eef.svg"
+    "main.css": "/nod-fe-project/static/css/main.5f361e03.chunk.css",
+    "main.js": "/nod-fe-project/static/js/main.5bb915a9.chunk.js",
+    "main.js.map": "/nod-fe-project/static/js/main.5bb915a9.chunk.js.map",
+    "runtime-main.js": "/nod-fe-project/static/js/runtime-main.7c08365b.js",
+    "runtime-main.js.map": "/nod-fe-project/static/js/runtime-main.7c08365b.js.map",
+    "static/js/2.f8f13b51.chunk.js": "/nod-fe-project/static/js/2.f8f13b51.chunk.js",
+    "static/js/2.f8f13b51.chunk.js.map": "/nod-fe-project/static/js/2.f8f13b51.chunk.js.map",
+    "index.html": "/nod-fe-project/index.html",
+    "precache-manifest.49da6d0630346ede59353b4627eda89e.js": "/nod-fe-project/precache-manifest.49da6d0630346ede59353b4627eda89e.js",
+    "service-worker.js": "/nod-fe-project/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/nod-fe-project/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.f8f13b51.chunk.js.LICENSE.txt": "/nod-fe-project/static/js/2.f8f13b51.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/nod-fe-project/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.7f156e5d.js",
+    "static/js/runtime-main.7c08365b.js",
     "static/js/2.f8f13b51.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.57b373f0.chunk.js"
+    "static/js/main.5bb915a9.chunk.js"
   ]
 }
