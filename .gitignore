@@ -11,6 +11,9 @@
 # production
 /build
 
+# docz
+/.docz
+
 # misc
 .DS_Store
 .env.local
