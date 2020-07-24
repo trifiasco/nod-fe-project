@@ -23,7 +23,7 @@ You will also see any lint errors in the console.
 ## Docz
 This project uses `docz` for component wise documentation. To see docz-documentation run
 
-## `npm run docz:dev`
+### `npm run docz:dev`
 
 **If your file system's file watcher limit is low, this can raise an error. To fix that simply run commands found [here](https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers#the-technical-details)
 
