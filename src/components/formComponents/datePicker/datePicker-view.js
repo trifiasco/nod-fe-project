@@ -42,7 +42,7 @@ const DatePicker = (props) => {
 DatePicker.propTypes = {
     id: PropTypes.string,
     label: PropTypes.string,
-    value: PropTypes.oneOfType(PropTypes.instanceOf(Date), PropTypes.instanceOf(null), PropTypes.string),
+    value: PropTypes.oneOfType([PropTypes.instanceOf(Date), PropTypes.instanceOf(null), PropTypes.string]),
     field: PropTypes.string,
     onChange: PropTypes.func,
 }

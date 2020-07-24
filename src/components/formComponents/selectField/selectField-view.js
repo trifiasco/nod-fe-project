@@ -69,7 +69,8 @@ SelectField.propTypes = {
     field: PropTypes.string,
     value: PropTypes.arrayOf(PropTypes.string),
     onChange: PropTypes.func,
-    currentOptions: PropTypes.array
+    currentOptions: PropTypes.array,
+    descriptions: PropTypes.object,
 }
 
 SelectField.defaultProps = {
@@ -79,7 +80,8 @@ SelectField.defaultProps = {
     field: 'select',
     value: ['1'],
     onChange: () => {},
-    currentOptions: ['1', '2', '3']
+    currentOptions: ['1', '2', '3'],
+    descriptions: {}
 }
 
 export default SelectField;

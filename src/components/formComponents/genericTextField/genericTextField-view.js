@@ -63,6 +63,7 @@ GenericTextField.propTypes = {
     field: PropTypes.string,
     value: PropTypes.string,
     onChange: PropTypes.func,
+    descriptions: PropTypes.object,
 }
 
 GenericTextField.defaultProps = {
@@ -72,6 +73,7 @@ GenericTextField.defaultProps = {
     field: 'firstName',
     value: '',
     onChange: () => {},
+    descriptions: {}
 }
 
 export default GenericTextField;
