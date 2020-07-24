@@ -16,7 +16,6 @@ const PhoneNumberField = (props) => {
 
     const handleOnChange = val => {
         if(!isValidNumber(val)){
-            console.log('here');
             setError(true);
             setHintText('Invalid Phone Number');
             return;
@@ -24,7 +23,6 @@ const PhoneNumberField = (props) => {
         setError(false);
         setHintText('');
         onChange(val, field);
-        console.log('send to onchange: ', val)
     }
 
     return (
