@@ -14,7 +14,7 @@ import SelectField from '../formComponents/selectField';
 import ProgressBar from '../formComponents/progressBar';
 
 const Form = (props) => {
-    const {onSubmit, onChange, currentFields, genders, recommendations, progress} = props;
+    const {onSubmit, onChange, currentFields, genders, recommendations, progress, descriptions} = props;
 
     const classes = useStyles();
 
@@ -33,7 +33,7 @@ const Form = (props) => {
                             type="text"
                             field='firstName'
                             value={currentFields.firstName}
-                            {...{onChange}}
+                            {...{onChange, descriptions}}
                         />
 
                         <GenericTextField
@@ -42,7 +42,7 @@ const Form = (props) => {
                             type="text"
                             field='lastName'
                             value={currentFields.lastName}
-                            {...{ onChange }}
+                            {...{ onChange, descriptions }}
                         />
 
                         <DatePicker
@@ -50,7 +50,7 @@ const Form = (props) => {
                             label="Date of Birth"
                             field="dob"
                             value={currentFields.dob}
-                            {...{onChange}}
+                            {...{ onChange, descriptions }}
                         />
 
                         <GenericTextField
@@ -59,7 +59,7 @@ const Form = (props) => {
                             type="email"
                             field='email'
                             value={currentFields.email}
-                            {...{ onChange }}
+                            {...{ onChange, descriptions }}
                         />
 
                         <GenericTextField
@@ -68,7 +68,7 @@ const Form = (props) => {
                             type="text"
                             field='address'
                             value={currentFields.address}
-                            {...{ onChange }}
+                            {...{ onChange, descriptions }}
                         />
 
                         <PhoneNumberField
@@ -76,7 +76,7 @@ const Form = (props) => {
                             label="Phone Number"
                             field='phone'
                             value={currentFields.phone}
-                            {...{ onChange }}
+                            {...{ onChange, descriptions }}
                         />
 
                         <SelectField
@@ -86,7 +86,7 @@ const Form = (props) => {
                          variant="single"
                          currentOptions={genders}
                          value={currentFields.gender}
-                         {...{ onChange }}
+                            {...{ onChange, descriptions }}
                         />
 
                         <SelectField
@@ -96,7 +96,7 @@ const Form = (props) => {
                             variant="multiple"
                             currentOptions={recommendations}
                             value={currentFields.recommendation}
-                            {...{ onChange }}
+                            {...{ onChange, descriptions }}
                         />
 
 

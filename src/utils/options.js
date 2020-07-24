@@ -11,4 +11,11 @@ const recommendations = [
     "Estate Planning"
 ];
 
-export {genders, recommendations};
+const descriptions = {
+    "email": "The customers primary contact email address",
+    "address": "The customers current residential address",
+    "recommendation": "Select all of the areas that you are providing a recommendation for"
+}
+
+
+export {genders, recommendations, descriptions};

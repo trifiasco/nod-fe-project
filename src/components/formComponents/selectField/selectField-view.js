@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import { FormControl, Input, InputLabel, Select, MenuItem, Checkbox, ListItemText } from '@material-ui/core';
+import { FormControl, Input, InputLabel, Select, MenuItem, Checkbox, ListItemText, Tooltip } from '@material-ui/core';
 import useStyles from './selectField-styles';
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -15,8 +15,10 @@ const MenuProps = {
 
 const SelectField = (props) => {
     const classes = useStyles();
-    const { id, label, variant, currentOptions, value, field, onChange } = props;
+    const { id, label, variant, currentOptions, value, field, onChange, descriptions } = props;
     const isMultiple = variant === 'multiple';
+    const hasTooltip = descriptions.hasOwnProperty(field);
+    const tooltip = hasTooltip ? descriptions[field] : '';
 
     const [selected, setSelected] = useState(value);
 
@@ -25,7 +27,7 @@ const SelectField = (props) => {
         onChange(event.target.value, field);
     };
 
-    return (
+    const selectElement = (
         <div>
             <FormControl className={classes.root}>
                 <InputLabel id={`${id}-label`}>
@@ -38,8 +40,8 @@ const SelectField = (props) => {
                     value={selected}
                     onChange={handleChange}
                     input={<Input />}
-                    renderValue={(selected) => isMultiple ? selected.join(', ') : selected }
-                    MenuProps = {MenuProps}
+                    renderValue={(selected) => isMultiple ? selected.join(', ') : selected}
+                    MenuProps={MenuProps}
                     inputProps={{ "data-testid": `${label}` }}
                 >
                     {currentOptions.map((option) => (
@@ -52,6 +54,12 @@ const SelectField = (props) => {
             </FormControl>
         </div>
     );
+
+
+
+    return hasTooltip ? (
+        <Tooltip title={tooltip}>{selectElement}</Tooltip>
+    ) : selectElement;
 };
 
 SelectField.propTypes = {

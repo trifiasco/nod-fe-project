@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { ExportToCsv } from 'export-to-csv';
 import Form from './form-view';
-import {genders, recommendations} from '../../utils/options';
+import {genders, recommendations, descriptions} from '../../utils/options';
 
 const defaultFields = {
     firstName: '',
@@ -63,7 +63,7 @@ const FormContainer = props => {
     }
 
     return (
-        <Form {...props} {...{onSubmit, onChange, currentFields, genders, recommendations, progress}}/>
+        <Form {...props} {...{onSubmit, onChange, currentFields, genders, recommendations, progress, descriptions}}/>
     );
 };
 
