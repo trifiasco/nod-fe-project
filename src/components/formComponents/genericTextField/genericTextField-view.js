@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import validator from 'validator';
 import TextField from '@material-ui/core/TextField';
 
 const GenericTextField = (props) => {
 
     const { id, label, type, field, value, onChange} = props;
 
+    const [error, setError] = useState(false);
+    const [hintText, setHintText] = useState('');
+    const [currentValue, setCurrentValue] = useState(value);
+
     const handleChange = event => {
+        if(!(field === 'email' && validator.isEmail(event.target.value))){
+            setError(true);
+            setHintText('Invalid email address');
+            setCurrentValue(event.target.value);
+            onChange('', field)
+            return;
+        }
+        setError(false);
+        setHintText('');
+        setCurrentValue(event.target.value);
         onChange(event.target.value, field);
     };
     
@@ -19,8 +34,10 @@ const GenericTextField = (props) => {
                 label={label}
                 type={type}
                 fullWidth
-                value={value}
+                value={currentValue}
                 onChange={handleChange}
+                helperText={hintText}
+                error={error}
             />
         </div>
     );
