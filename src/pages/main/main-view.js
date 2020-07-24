@@ -24,7 +24,7 @@ const Main = () => {
         <div>
             <Navbar />
             <div className={classes.formButton}>
-                <Button variant="outlined" color="primary" onClick={handleClickOpen}>
+                <Button variant="outlined" size="large" color="primary" onClick={handleClickOpen}>
                     Open form
                 </Button>
             </div>
