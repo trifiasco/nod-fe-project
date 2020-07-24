@@ -14,6 +14,7 @@ const GenericTextField = (props) => {
         <div>
             <TextField
                 margin="dense"
+                inputProps={{"data-testid": `${label}`}}
                 id={id}
                 label={label}
                 type={type}

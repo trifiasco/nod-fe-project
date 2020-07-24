@@ -30,7 +30,7 @@ const PhoneNumberField = (props) => {
     return (
         <div>
             <FormControl className={classes.root}>
-                <MuiPhoneNumber error={error} helperText={hintText}  id={id} defaultCountry={'us'} onChange={handleOnChange} />
+                <MuiPhoneNumber error={error} helperText={hintText} inputProps={{ "data-testid": `${label}` }} label={label} id={id} defaultCountry={'us'} onChange={handleOnChange} />
             </FormControl>
             
         </div>

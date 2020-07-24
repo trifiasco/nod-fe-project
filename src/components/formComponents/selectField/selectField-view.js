@@ -40,6 +40,7 @@ const SelectField = (props) => {
                     input={<Input />}
                     renderValue={(selected) => isMultiple ? selected.join(', ') : selected }
                     MenuProps = {MenuProps}
+                    inputProps={{ "data-testid": `${label}` }}
                 >
                     {currentOptions.map((option) => (
                         <MenuItem key={option} value={option}>

@@ -22,6 +22,7 @@ const DatePicker = (props) => {
                         format="MM/dd/yyyy"
                         margin="normal"
                         id={id}
+                        inputProps={{ "data-testid": `${label}` }}
                         label={label}
                         value={value}
                         onChange={(date) => onChange(date.toISOString(), field)}
@@ -41,7 +42,7 @@ const DatePicker = (props) => {
 DatePicker.propTypes = {
     id: PropTypes.string,
     label: PropTypes.string,
-    value: PropTypes.instanceOf(Date) || PropTypes.instanceOf(null),
+    value: PropTypes.oneOfType(PropTypes.instanceOf(Date), PropTypes.instanceOf(null), PropTypes.string),
     field: PropTypes.string,
     onChange: PropTypes.func,
 }
@@ -49,7 +50,7 @@ DatePicker.propTypes = {
 DatePicker.defaultProps = {
     id: 'dob',
     label: 'date of birth',
-    value: '02/02/2020',
+    value: new Date(),
     field: 'dob',
     onChange: () => {}
 
