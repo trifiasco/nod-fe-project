@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import { FormControl, Input, InputLabel, Select, MenuItem, Checkbox, ListItemText } from '@material-ui/core';
-
+import useStyles from './selectField-styles';
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
 const MenuProps = {
@@ -14,19 +14,20 @@ const MenuProps = {
 };
 
 const SelectField = (props) => {
-
-    const { id, label, variant, currentOptions, selectedValue } = props;
+    const classes = useStyles();
+    const { id, label, variant, currentOptions, value, field, onChange } = props;
     const isMultiple = variant === 'multiple';
 
-    const [selected, setSelected] = useState(selectedValue);
+    const [selected, setSelected] = useState(value);
 
     const handleChange = event => {
         setSelected(event.target.value);
+        onChange(event.target.value, field);
     };
 
     return (
         <div>
-            <FormControl>
+            <FormControl className={classes.root}>
                 <InputLabel id={`${id}-label`}>
                     {label}
                 </InputLabel>
@@ -56,12 +57,20 @@ SelectField.propTypes = {
     id: PropTypes.string,
     label: PropTypes.string,
     variant: PropTypes.string,
+    field: PropTypes.string,
+    value: PropTypes.arrayOf(PropTypes.string),
+    onChange: PropTypes.func,
+    currentOptions: PropTypes.array
 }
 
 SelectField.defaultProps = {
     id: 'field',
     label: 'label',
-    variant: 'single'
+    variant: 'single',
+    field: 'select',
+    value: ['1'],
+    onChange: () => {},
+    currentOptions: ['1', '2', '3']
 }
 
 export default SelectField;

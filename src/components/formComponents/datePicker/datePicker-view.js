@@ -7,29 +7,33 @@ import {
     MuiPickersUtilsProvider,
     KeyboardDatePicker,
 } from '@material-ui/pickers';
+import { FormControl } from '@material-ui/core';
 
 const DatePicker = (props) => {
 
-    const {id, label, selectedDate} = props;
+    const {id, label, value, field, onChange} = props;
 
     return (
         <div>
-            <MuiPickersUtilsProvider utils={DateFnsUtils}>
+            <FormControl fullWidth>
+                <MuiPickersUtilsProvider utils={DateFnsUtils}>
                 <Grid container justify="space-around">
                     <KeyboardDatePicker
-                        variant="inline"
                         format="MM/dd/yyyy"
                         margin="normal"
                         id={id}
                         label={label}
-                        value={selectedDate}
-                        onChange={() => {}}
+                        value={value}
+                        onChange={(date) => onChange(date.toISOString(), field)}
                         KeyboardButtonProps={{
                             'aria-label': 'change date'
                         }}
+                        fullWidth
                     />
                 </Grid>
             </MuiPickersUtilsProvider>
+            </FormControl>
+            
         </div>
     );
 };
@@ -37,13 +41,17 @@ const DatePicker = (props) => {
 DatePicker.propTypes = {
     id: PropTypes.string,
     label: PropTypes.string,
-    selectedDate: PropTypes.string,
+    value: PropTypes.instanceOf(Date) || PropTypes.instanceOf(null),
+    field: PropTypes.string,
+    onChange: PropTypes.func,
 }
 
 DatePicker.defaultProps = {
     id: 'dob',
     label: 'date of birth',
-    selectedDate: '02/02/2020',
+    value: '02/02/2020',
+    field: 'dob',
+    onChange: () => {}
 
 }
 

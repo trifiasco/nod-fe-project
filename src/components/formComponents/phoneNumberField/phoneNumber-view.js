@@ -1,17 +1,38 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import MuiPhoneNumber from 'material-ui-phone-number';
+import {isValidNumber} from 'libphonenumber-js';
+import useStyles from './phoneNumber-styles';
+import { FormControl } from '@material-ui/core';
 
 const PhoneNumberField = (props) => {
 
-    const { id, label } = props;
+    const classes = useStyles();
+
+    const { id, label, field, value, onChange } = props;
+
+    const [error, setError] = useState(false);
+    const [hintText, setHintText] = useState('');
+
     const handleOnChange = val => {
-        console.log(val);
+        if(!isValidNumber(val)){
+            console.log('here');
+            setError(true);
+            setHintText('Invalid Phone Number');
+            return;
+        }
+        setError(false);
+        setHintText('');
+        onChange(val, field);
+        console.log('send to onchange: ', val)
     }
 
     return (
         <div>
-            <MuiPhoneNumber id={id} defaultCountry={'us'} onChange={handleOnChange} />
+            <FormControl className={classes.root}>
+                <MuiPhoneNumber error={error} helperText={hintText}  id={id} defaultCountry={'us'} onChange={handleOnChange} />
+            </FormControl>
+            
         </div>
     );
 };
