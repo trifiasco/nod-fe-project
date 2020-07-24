@@ -30,6 +30,12 @@ const Main = () => {
             </div>
 
             <Form {...{open, handleClickClose}}/>
+
+            <div className={classes.descriptionArea}>
+                <Button variant="outlined" size="large" color="primary">
+                    <a href="https://github.com/trifiasco/nod-fe-project/" target="__blank">See code on Github</a>
+                </Button>
+            </div>
         </div>
     );
 

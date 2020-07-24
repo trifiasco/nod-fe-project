@@ -4,7 +4,12 @@ const useStyles = makeStyles(() => ({
     formButton: {
         position: 'absolute',
         top: '30%',
-        left: '40%',
+        left: '45%',
+    },
+    descriptionArea: {
+        position: 'absolute',
+        top: '90%',
+        left: '40%'
     }
 }));
 
