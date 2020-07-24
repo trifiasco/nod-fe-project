@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/nod-fe-project/static/css/main.5f361e03.chunk.css",
-    "main.js": "/nod-fe-project/static/js/main.5bb915a9.chunk.js",
-    "main.js.map": "/nod-fe-project/static/js/main.5bb915a9.chunk.js.map",
+    "main.js": "/nod-fe-project/static/js/main.ee0a4fe8.chunk.js",
+    "main.js.map": "/nod-fe-project/static/js/main.ee0a4fe8.chunk.js.map",
     "runtime-main.js": "/nod-fe-project/static/js/runtime-main.7c08365b.js",
     "runtime-main.js.map": "/nod-fe-project/static/js/runtime-main.7c08365b.js.map",
-    "static/js/2.f8f13b51.chunk.js": "/nod-fe-project/static/js/2.f8f13b51.chunk.js",
-    "static/js/2.f8f13b51.chunk.js.map": "/nod-fe-project/static/js/2.f8f13b51.chunk.js.map",
+    "static/js/2.91a5e3cc.chunk.js": "/nod-fe-project/static/js/2.91a5e3cc.chunk.js",
+    "static/js/2.91a5e3cc.chunk.js.map": "/nod-fe-project/static/js/2.91a5e3cc.chunk.js.map",
     "index.html": "/nod-fe-project/index.html",
-    "precache-manifest.49da6d0630346ede59353b4627eda89e.js": "/nod-fe-project/precache-manifest.49da6d0630346ede59353b4627eda89e.js",
+    "precache-manifest.bfec49f5e18318dee8f95026f4acf68c.js": "/nod-fe-project/precache-manifest.bfec49f5e18318dee8f95026f4acf68c.js",
     "service-worker.js": "/nod-fe-project/service-worker.js",
     "static/css/main.5f361e03.chunk.css.map": "/nod-fe-project/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.f8f13b51.chunk.js.LICENSE.txt": "/nod-fe-project/static/js/2.f8f13b51.chunk.js.LICENSE.txt",
+    "static/js/2.91a5e3cc.chunk.js.LICENSE.txt": "/nod-fe-project/static/js/2.91a5e3cc.chunk.js.LICENSE.txt",
     "static/media/logo.svg": "/nod-fe-project/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.7c08365b.js",
-    "static/js/2.f8f13b51.chunk.js",
+    "static/js/2.91a5e3cc.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.5bb915a9.chunk.js"
+    "static/js/main.ee0a4fe8.chunk.js"
   ]
 }
