@@ -1,9 +1,20 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import { Dialog, DialogTitle, DialogContent, DialogActions } from '@material-ui/core';
+import { 
+    Dialog, 
+    DialogTitle, 
+    DialogContent, 
+    DialogActions } from '@material-ui/core';
 import useStyles from './form-styles';
 
+import GenericTextField from '../formComponents/genericTextField';
+import DatePicker from '../formComponents/datePicker';
+import PhoneNumberField from '../formComponents/phoneNumberField';
+import SelectField from '../formComponents/selectField';
+import ProgressBar from '../formComponents/progressBar';
+
 const Form = (props) => {
+    const {onSubmit, onChange, currentFields, genders, recommendations, progress} = props;
 
     const classes = useStyles();
 
@@ -11,16 +22,91 @@ const Form = (props) => {
 
     return (
         <div>
-            <Dialog open={open} onClose={handleClickClose} aria-labelledby="form-dialog-title">
-                <DialogTitle id="form-dialog-title">NOD Form</DialogTitle>
+            <Dialog fullWidth open={open} onClose={handleClickClose} aria-labelledby="form-dialog-title">
+                <DialogTitle className={classes.formHeader} id="form-dialog-title">NOD Form</DialogTitle>
                 <DialogContent>
+                    <form>
+                        <ProgressBar value={progress} />
+                        <GenericTextField
+                            id="first-name"
+                            label="First Name"
+                            type="text"
+                            field='firstName'
+                            value={currentFields.firstName}
+                            {...{onChange}}
+                        />
 
+                        <GenericTextField
+                            id="last-name"
+                            label="Last Name"
+                            type="text"
+                            field='lastName'
+                            value={currentFields.lastName}
+                            {...{ onChange }}
+                        />
+
+                        <DatePicker
+                            id="dob"
+                            label="Date of Birth"
+                            field="dob"
+                            value={currentFields.dob}
+                            {...{onChange}}
+                        />
+
+                        <GenericTextField
+                            id="email"
+                            label="Email"
+                            type="email"
+                            field='email'
+                            value={currentFields.email}
+                            {...{ onChange }}
+                        />
+
+                        <GenericTextField
+                            id="address"
+                            label="Address"
+                            type="text"
+                            field='address'
+                            value={currentFields.address}
+                            {...{ onChange }}
+                        />
+
+                        <PhoneNumberField
+                            id="phone"
+                            label="Phone Number"
+                            field='phone'
+                            value={currentFields.phone}
+                            {...{ onChange }}
+                        />
+
+                        <SelectField
+                         id="gender"
+                         label="Gender"
+                         field="gender"
+                         variant="single"
+                         currentOptions={genders}
+                         value={currentFields.gender}
+                         {...{ onChange }}
+                        />
+
+                        <SelectField
+                            id="recommendation"
+                            label="Areas of Recommendation"
+                            field="recommendation"
+                            variant="multiple"
+                            currentOptions={recommendations}
+                            value={currentFields.recommendation}
+                            {...{ onChange }}
+                        />
+
+
+                    </form>
                 </DialogContent>
-                <DialogActions>
-                    <Button onClick={handleClickClose} color="primary">
+                <DialogActions className={classes.formActions}>
+                    <Button onClick={handleClickClose} color="secondary">
                         Cancel
                     </Button>
-                    <Button onClick={handleClickClose} color="primary">
+                    <Button disabled={progress !== 100} onClick={onSubmit} variant="contained" color="primary">
                         Submit
                     </Button>
                 </DialogActions>

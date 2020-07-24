@@ -5,6 +5,13 @@ const useStyles = makeStyles(() => ({
         position: 'absolute',
         top: '30%',
         left: '40%',
+    },
+    formActions: {
+        marginTop: '20px',
+        background: 'darkGray'
+    },
+    formHeader: {
+        background: 'darkGray',
     }
 }));
 
