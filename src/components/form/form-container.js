@@ -36,11 +36,9 @@ const FormContainer = props => {
     
     const handleProgress = (newCurrentFields) => {
         let current = 0;
-        console.log(newCurrentFields);
         Object.keys(newCurrentFields).forEach(key => {
             const value = newCurrentFields[key];
             if((Array.isArray(value) && value.length > 0) || (!Array.isArray(value) && value)){
-                console.log('item: ', key);
                 current += 1;
             }
             return;
@@ -50,7 +48,6 @@ const FormContainer = props => {
     };
 
     const onChange = (value, field) => {
-        console.log(value, field);
         const newCurrentFields = {...currentFields, [field]: value};
         setCurrentFields(newCurrentFields);
         handleProgress(newCurrentFields);
